@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" class="ancient-ie old-ie no-js" lang="zh-CN">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" class="ancient-ie old-ie no-js" lang="zh-CN">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" class="old-ie no-js" lang="zh-CN">
+<![endif]-->
+<!--[if IE 9]>
+<html id="ie9" class="old-ie9 no-js" lang="zh-CN">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html class="no-js" lang="zh-CN">
+<!--<![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no"/>
+	<title>Operation</title> 
+    <link href="css/common.css" rel="stylesheet" type="text/css">    
+    <link href="js/FooTable/css/footable.core.css" rel="stylesheet" type="text/css" />
+    <link href="js/FooTable/css/footable.standalone.css" rel="stylesheet" type="text/css" />      
+    <script language="javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script language="javascript" src="js/jquery.bpopup.min.js"></script>
+    <script language="javascript" src="js/FooTable/js/footable.js"></script> 
+    <script language="javascript" src="js/common.js"></script>       
+</head>
+<body>
+	<header class="lay_topfixed">
+        <table>
+        	<tr>
+                <td id="Operation" class="selected">Operation</td>
+                <td id="Policy">Policy</td>
+                <td id="Group">Group</td>
+                <td id="User">User</td>          
+            </tr>
+        </table>
+    </header>
+    <section class="frame-main">
+    	<div class="header">
+        	<span class="title">Operation</span>
+        	<span id="add" class="button right"><ins></ins>创建</span>
+        </div>
+        <table class="footable table table-bordered">
+            <thead>
+                <tr>
+                    <th data-toggle="true">
+                        主题
+                    </th>
+                    <th data-hide="phone">
+                        发布时间
+                    </th>
+                    <th data-hide="phone,tablet">
+                        接受者
+                    </th>
+                    <th data-hide="phone">
+                        回应
+                    </th>
+                    <th>
+                        未回应
+                    </th>
+                    <th>
+                        未查看
+                    </th>
+                    <th data-hide="phone,tablet" style="width:130px;">
+                        操作
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">Operation 1</a></td>
+                    <td>2013/11/10 10:43</td>
+                    <td>groupA（12）</td>
+                    <td>8</td>
+                    <td class="red">3</td>
+                    <td class="red">1</td>
+                    <td>
+                        <span id="Operation id" type="reply" class="button left"><ins></ins>查看回复</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="#">Operation 2</a></td>
+                    <td>2013/11/10 10:43</td>
+                    <td>groupA（12）</td>
+                    <td></td>
+                    <td class="red"></td>
+                    <td class="red"></td>
+                    <td>
+                        <span id="Operation id" type="announce" class="button left"><ins></ins>发布</span>
+                        <span id="Operation id" type="edit" class="button left"><ins></ins>更改</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
+<script type="text/javascript">
+window.amGloble = {
+	table : {
+		
+	}
+}
+
+amGloble.table = {
+	init : function() {
+		var self = this;
+		this.$tabs = $('.footable').delegate('span','click',function(){	
+			alert("操作对象:"+$(this).attr("id") + " 操作类型:" + $(this).attr("type"));
+		});
+	}
+}	
+	
+$(function () {			
+	$('.footable').footable();
+	amGloble.table.init();
+	
+	$("#add").bind("click",function(e){
+		
+	});	
+});
+</script>

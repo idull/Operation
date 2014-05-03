@@ -1,0 +1,168 @@
+﻿html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, input, button, textarea, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-family: Open Sans, Arial; letter-spacing:0.09em;
+	list-style:none;
+	font-size:12px;
+}
+
+.lay_topfixed {
+	position:fixed;
+	z-index: 501;
+	width:100%;
+	height: 28px;
+	letter-spacing:0.22em;	
+}
+
+.lay_topfixed table{
+	width:100%;
+	height:28px;
+	background-color:#797979;
+	border-collapse:separate;
+	border-spacing: 1px;
+	font-weight:bold;
+}
+
+.lay_topfixed td{
+	width:25%;
+	text-align:center;
+	line-height:28px;
+	font-size:12px;
+	background-color:#fff;
+	color:#333;
+	cursor:pointer;
+}
+
+.lay_topfixed .selected, .lay_topfixed .selected:hover{
+	background-color:#222;
+	color:#fff;	
+}
+
+.lay_topfixed td:hover{
+	background-color:#aaa;
+	color:#FFF;
+}
+
+.frame-main{	
+	position: absolute;
+	z-index: 23;
+	left: 0;
+	right: 0;
+	top: 35px;
+	bottom: 0;
+	background-color:#fff;
+	padding:15px 10px;
+}
+
+.frame-main .header{	
+	max-width:1044px;
+	margin-left: auto;
+	margin-right: auto;	 
+	width:100%;
+	height:40px;
+}
+
+.frame-main .title{
+	float:left;
+	font-size:24px;
+	font-weight:bold;
+}
+
+.frame-main .right{
+	float:right;
+	margin-left:6px;
+}
+
+.frame-main table{
+	width:100%;
+/*	background-color:#797979;*/
+	max-width:1044px;
+	mix-width:200px;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+.table-bordered {
+	border: 1px solid #dddddd;
+	border-collapse: separate;
+	border-left: 0;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.frame-main .head td{
+	font-weight:bold;
+	text-align:center;
+	background: url(../images/nav_bj.png) repeat-x 0 0;
+	height:28px;
+	line-height:28px;	
+}
+
+
+.toolbar{
+	display: block;
+	width:600px;
+	background-color:red;
+}
+
+.frame-main .table td{
+	padding: 3px 10px 3px 6px;
+	line-height:28px;
+}
+
+.red{
+	color:#FF0000;
+}
+
+/*.frame-main td{
+	height:34px;
+	line-height:28px;
+	padding-left:6px;
+	padding-right:6px;
+	background:#eee;
+}
+
+.frame-main .cell-a td{
+	background:#fff;
+}
+
+.frame-main .cell-b td{
+	background:#f9f9f9;
+}*/
+
+.button {
+	display: block;
+	height: 28px;
+	text-align:center;
+	background: url(../images/bj_1.png) 0 -619px;
+	position: relative;
+	padding: 0 15px;
+	cursor: pointer;
+	line-height: 28px;
+	color: #000;
+	font-size: 12px;
+	letter-spacing:0.16em;
+}
+
+.left{
+	float:left;
+	margin-right:6px;
+}
+
+.button ins {
+	width: 10px;
+	height: 28px;
+	background: url(../images/bj_1.png) -110px -619px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.button:hover {
+	background-position: 0 -591px;
+}
+
+.button:hover ins {
+	background-position: -110px -591px;
+}
